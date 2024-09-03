@@ -2,6 +2,11 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+![Personal Project](https://img.shields.io/badge/Project-Personal-blue)
+[![Personal Project](https://img.shields.io/badge/Project-Personal-blue)](https://github.com/yourusername/yourrepository)
+![Personal Project](https://img.shields.io/badge/Project-Personal-green)
+![Your Name's Project](https://img.shields.io/badge/Your%20Name's-Project-purple)
+
 A Python tool to fetch and process air quality data from the Breathe London API.
 
 ## Features
@@ -55,7 +60,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This is a personal project created and maintained by Meg Patakota. All rights reserved. This project is not licensed for use, modification, or distribution without explicit permission from the author.
+If you're interested in using or contributing to this project, please contact me directly at [your email or preferred contact method].
 
 ## Acknowledgments
 
