@@ -66,4 +66,4 @@ This is a personal project created and maintained by Meg Patakota. All rights re
 ## Acknowledgments
 
 - Breathe London for providing the air quality data API
-- [Add any other acknowledgments here]
+<!-- - [Add any other acknowledgments here] -->
