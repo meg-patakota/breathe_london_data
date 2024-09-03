@@ -1,5 +1,6 @@
 # Breathe London Data
 [![Personal Project](https://img.shields.io/badge/Project-Personal-blue)](https://meg-patakota.github.io)
+[![by Meg Patakota](https://img.shields.io/badge/by-Meg%20Patakota-blue)](https://meg-patakota.github.io)
 
 A Python tool to fetch and process air quality data from the Breathe London API.
 
