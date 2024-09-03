@@ -51,12 +51,17 @@ python breathe_london_api.py --api_key YOUR_API_KEY --output my_output.csv --lim
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions to this project are welcome! If you're interested in contributing or using this project, please follow these steps:
+
+1. Check out my [GitHub.io page](https://meg-patakota.github.io) for contact details and more information about my work.
+2. Feel free to open an issue to discuss potential changes or improvements.
+3. If you'd like to make direct changes, please submit a Pull Request.
+
+I appreciate your interest in my project and look forward to potential collaborations!
 
 ## License
 
 This is a personal project created and maintained by Meg Patakota. All rights reserved. This project is not licensed for use, modification, or distribution without explicit permission from the author.
-If you're interested in using or contributing to this project, please contact me directly at [your email or preferred contact method].
 
 ## Acknowledgments
 
