@@ -3,7 +3,7 @@
 [![by Meg Patakota](https://img.shields.io/badge/by-Meg%20Patakota-blue)](https://meg-patakota.github.io)
 
 A Python tool to fetch and process air quality data from the Breathe London API.
-Official Breathe London Developers documentation [here](https://www.breathelondon.org/developers)
+Official Breathe London Developers documentation [here](https://www.breathelondon.org/developers).
 
 ## Features
 
