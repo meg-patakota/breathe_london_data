@@ -77,9 +77,13 @@ else:
 ### From the Command Line
 
 ```bash
+# Usage to set the sitecodes required below
 python breathe_london_api.py --api_key YOUR_API_KEY --output my_output.csv --limit 10
 ```
-
+```bash
+# Usage to get hourly data for the sitecodes of your choice
+python your_script_name.py --sitecodes CLDP0001 CLDP0002 --species IPM25 INO2 --averaging Hourly --days 30
+```
 ## Configuration
 
 - `api_key`: Your Breathe London API key
