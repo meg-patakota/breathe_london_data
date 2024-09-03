@@ -27,6 +27,7 @@ pip install -r requirements.txt
 ### In a Python Notebook
 
 ```python
+# Usage to set the sitecodes required below
 from breathe_london_api_list_sensors import main
 
 df, site_codes, output_file = main(api_key="YOUR_API_KEY", output_file="my_output.csv", site_code_limit=10)
@@ -39,6 +40,7 @@ else:
 ```
 
 ```python
+# Usage to get hourly data for the sitecodes of your choice
 # Import the necessary functions and variables from your script
 from breathe_london_api_clarity_data import main, get_clarity_data, API_KEY
 
