@@ -122,4 +122,4 @@ if __name__ == "__main__":
 #     print(f"First few site codes: {site_codes[:5]}")
 #--------------------------------------------------------------#
 # Usage in a terminal:
-# python breathe_london_api.py --api_key YOUR_API_KEY --output my_output.csv --limit 10
+# python3 breathe_london_api_clarity_data.py --sitecodes CLDP0001 CLDP0002 --species IPM25 INO2 --averaging Hourly --days 30 
