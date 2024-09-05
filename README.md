@@ -14,12 +14,12 @@ Official Breathe London Developers documentation [here](https://www.breathelondo
 
 ## Installation
 
-Clone this repository and install the required dependencies:
+Clone this repository and install the required dependencies. Uses poetry:
 
 ```bash
 git clone https://github.com/yourusername/breathe_london_data.git
 cd breathe_london_data
-pip install -r requirements.txt
+poetry install
 ```
 
 ## Usage
@@ -28,21 +28,32 @@ pip install -r requirements.txt
 
 ```python
 # Usage to set the sitecodes required below
-from breathe_london_api_list_sensors import main
+from breathe_london_api_list_sensors import main, logger
+import os
+import logging
+from dotenv import load_dotenv
 
-df, site_codes, output_file = main(api_key="YOUR_API_KEY", output_file="my_output.csv", site_code_limit=10)
+logging.getLogger().addHandler(logging.StreamHandler())
+
+load_dotenv()
+
+df, site_codes, output_file = main(
+    api_key=os.getenv("API_KEY"), output_file="my_output.csv", site_code_limit=10
+)
 
 if df is None:
-    print("Failed to fetch data. Please check your API key and try again later.")
+    logger.error("Failed to fetch data. Please check your API key and try again later.")
 else:
-    print(f"Data saved to: {output_file}")
-    print(f"First few site codes: {site_codes[:5]}")
+    logger.info(f"Data saved to: {output_file}")
+    logger.info(f"First few site codes: {site_codes[:5]}")
 ```
 
 ```python
 # Usage to get hourly data for the sitecodes of your choice
 # Import the necessary functions and variables from your script
+# Import the necessary functions and variables from your script
 from breathe_london_api_clarity_data import main, get_clarity_data, API_KEY
+from datetime import datetime, timedelta
 
 # Test the get_clarity_data function
 siteCode = "CLDP0001"
@@ -72,17 +83,18 @@ if df is not None:
     print(f"Number of unique sites: {df.SiteCode.nunique()}")
 else:
     print("No data received")
+
 ```
 
 ### From the Command Line
 
 ```bash
 # Usage to set the sitecodes required below
-python breathe_london_api.py --api_key YOUR_API_KEY --output my_output.csv --limit 10
+python3 breathe_london_api_list_sensors.py --api_key YOUR_API_KEY --output my_output.csv --limit 10
 ```
 ```bash
 # Usage to get hourly data for the sitecodes of your choice
-python your_script_name.py --sitecodes CLDP0001 CLDP0002 --species IPM25 INO2 --averaging Hourly --days 30
+python3 breathe_london_api_clarity_data.py --sitecodes CLDP0001 CLDP0002 --species IPM25 INO2 --averaging Hourly --days 30
 ```
 ## Configuration
 
