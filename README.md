@@ -1,4 +1,4 @@
-# Breathe London Data
+# Air Pollution - Breathe London Data
 [![Personal Project](https://img.shields.io/badge/Project-Personal-green)](https://meg-patakota.github.io)
 [![by Meg Patakota](https://img.shields.io/badge/by-Meg%20Patakota-blue)](https://meg-patakota.github.io)
 
