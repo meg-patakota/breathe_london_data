@@ -94,7 +94,7 @@ python3 breathe_london_api_list_sensors.py --api_key YOUR_API_KEY --output my_ou
 ```
 ```bash
 # Usage to get hourly data for the sitecodes of your choice
-python3 breathe_london_api_clarity_data.py --sitecodes CLDP0001 CLDP0002 --species IPM25 INO2 --averaging Hourly --days 30
+python3 breathe_london_api_clarity_data.py --sitecodes CLDP0001 CLDP0002 --species IPM25 INO2 --averaging Hourly --days 30 
 ```
 ## Configuration
 
