@@ -38,7 +38,7 @@ logging.getLogger().addHandler(logging.StreamHandler())
 load_dotenv()
 
 df, site_codes, output_file = main(
-    api_key=os.getenv("API_KEY"), output_file="my_output.csv", site_code_limit=10
+    api_key=os.getenv("API_KEY"), output_file="breathe_london_api_list_sensors.csv", site_code_limit=10
 )
 
 if df is None:
@@ -50,32 +50,16 @@ else:
 
 ```python
 # Usage to get hourly data for the sitecodes of your choice
-# Import the necessary functions and variables from your script
-# Import the necessary functions and variables from your script
-from breathe_london_api_clarity_data import main, get_clarity_data, API_KEY
-from datetime import datetime, timedelta
-
-# Test the get_clarity_data function
-siteCode = "CLDP0001"
-species = "IPM25"
-endTime = datetime.now()
-startTime = endTime - timedelta(days=7)
-endTime_str = endTime.strftime("%a %d %b %Y %H:%M:%S")
-startTime_str = startTime.strftime("%a %d %b %Y %H:%M:%S")
-averaging = "Hourly"
-
-data = get_clarity_data(siteCode, species, startTime_str, endTime_str, averaging)
-if data is not None:
-    print(data.head())
-else:
-    print("No data received")
+from breathe_london_api_clarity_data import main
 
 # Test the main function
 siteCodes = ["CLDP0001", "CLDP0002"]
 species_list = ["IPM25", "INO2"]
+averaging = "Hourly"
 days = 30
+output_file = "breathe_london_api_clarity_data.csv"
 
-df = main(siteCodes, species_list, averaging, days)
+df = main(siteCodes, species_list, averaging, days, output_file)
 if df is not None:
     print(df.head())
     print(f"Total data shape: {df.shape}")
@@ -90,11 +74,11 @@ else:
 
 ```bash
 # Usage to set the sitecodes required below
-python3 breathe_london_api_list_sensors.py --api_key YOUR_API_KEY --output my_output.csv --limit 10
+python3 breathe_london_api_list_sensors.py --api_key YOUR_API_KEY --output breathe_london_list_sensors.csv --limit 10
 ```
 ```bash
 # Usage to get hourly data for the sitecodes of your choice
-python3 breathe_london_api_clarity_data.py --sitecodes CLDP0001 CLDP0002 --species IPM25 INO2 --averaging Hourly --days 30 
+python3 breathe_london_api_clarity_data.py --sitecodes CLDP0001 CLDP0002 --species IPM25 INO2 --averaging Hourly --days 30 --output breathe_london_api_clarity_data.csv
 ```
 ## Configuration
 
